@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>Casteria</title>
+  
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+ 
+</head>
+
+<body>
+    <!-- PC用ヘッダー -->
+     <header>
+       <div class="header-container">
+        <div class="title">
+       <h1>Casteria</h1>
+       </div>
+       <div class="pc-nav">
+         <ul>
+          <li class="current-page">Home</li>
+            <li>Food</li>
+            <li>Drink</li>
+            <li>お問合せ</li>
+         </ul>
+      
+         <div class="search-container">
+          <input type="text" placeholder="Search" class="search-box">
+          <button type="submit" class="search-button">Search</button>
+         </div>
+        </div>
+        <!-- SP用ヘッダー -->
+        <div id="hamburger">
+          <span></span>
+        </div>
+        <div class="sp-nav" onclick="toggleMenu()">
+          <ul>
+              <li class="current-page">Home</li>
+              <li>Food</li>
+              <li>Drink</li>
+              <li>お問合せ</li>
+          </ul>
+          <div class="search-container">
+              <input type="text" placeholder="Search" class="search-box">
+              <button type="submit" class="search-button">Search</button>
+          </div>
+       </div>
+    </div>
+  </div>
+</header>
+
+  
+     
+  <div class="swiperContainer">
+     <div class="swiper top-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="..\img\interior.jpg" ></div>
+          <div class="swiper-slide"><img src="..\img\restaurant.jpg" ></div>
+          <div class="swiper-slide"><img src="..\img\food.jpg" ></div>
+          <div class="swiper-slide"><img src="..\img\food2.jpg"></div>
+       </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+     </div>
+      <div class="swiper-scrollbar"></div>
+  </div>
+
+
+<div class="main-Container">  
+     <div class="news">
+       <h1>新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
+       <div class="topic">■衛生面に関して</div>
+         <ul class="content-list" style="display: none;">  
+           <li>マスクを着用しての接客</li>
+           <li>出勤前の検温の徹底</li>
+           <li>レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</li>
+           <li>より頻度の高い手洗いの励行</li>
+           <li>テーブルにお客様用の消毒用アルコールの設置</li>
+           <li>従業員間の距離確保ため、休憩や研修時の客席利用</li>
+          </ul>
+
+       <div class="topic">■お客様へのご協力のお願い</div>
+         <ul class="content-list" style="display: none;">
+            <li>店内では、飲食時以外のマスク着用をお願いいたします</li>
+            <li>入店時の手指の消毒にご協力ください</li>
+            <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</li>
+            <li>多数でお越しの際は、お1人がまとめてご注文願います（混雑時に入場制限をする場合がございます）</li>
+            <li>発熱や体調不良の際はご入店をお控えください</li>
+         </ul>
+    
+       <div class="topic">■サービスに関して</div>
+          <ul class="content-list" style="display: none;">
+            <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
+            <li>ドリンクやフードのサンプリング中止</li>
+            <li>地域活動・イベントの中止</li>
+            <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+            <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+            <li>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
+         </ul>
+       </div>   
+
+    <div class="recommend">
+      <div class="Signature-Food js-fade">
+      <h2>Signature Food</h2>
+      <div class="Signature-Food-inner">
+         <img class="food-image" src="..\img\food.jpg" width="300" height="200">
+         <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンのおいしさを引き立てる2種のソースも絶品です！</p>
+      </div>
+    </div> 
+     <div class="Our-Coffee js-fade">
+        <h2>Our Coffee</h2>
+          <div class="Our-Coffee-inner">
+            <img class="food-image" src="..\img\barista.jpg" width="300" height="200">
+            <p>当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースタリーで焙煎しています。</p>
+       </div> 
+      </div> 
+    <div class="Our-Food js-fade">
+        <h2>Our Food</h2>
+          <div class="Our-Food-inner">
+            <img class="food-image" src="..\img\food3.jpg" width="300" height="200">
+            <p>当店は何よりまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+          </div> 
+       </div> 
+    </div> 
+
+   
+    <div class="address js-fade">
+      <div>
+      <h2>Address</h2>
+      <p>681 xxxx Drive, xxxxx xxxx #01 -06 000000</p>
+      <p>Opening Hours</p>
+      <h2>Mondays - Friday:10am -9pm</h2>
+      <p>Saturdays,Sundays&PublicHolidays:9am -9pm</p>
+      </div>
+      
+      <img src="..\img\barista.jpg" width="300" height="200">
+    </div>
+   
+
+
+    <div class="shop js-fade">
+      <h2>店舗一覧</h2>
+      <div class="shop-item">
+        <div class="shop-details">
+          <img class="shop-image" src="..\img\restaurant2.jpg" width="300" height="200">
+          <div>
+            <span class="pin-icon"></span>
+            <p>東京都渋谷区xxxxxx xxxxx</p>
+          </div>
+        </div>
+      </div>
+      <div class="shop-item">
+        <div class="shop-details">
+          <img class="shop-image" src="..\img\restaurant3.jpg" width="300" height="200">
+          <div>
+            <span class="pin-icon"></span>
+            <p>千葉県松戸市xxxxxx xxxxx</p>
+      
+          </div>
+        </div>
+      </div>
+      <div class="shop-item ">
+        <div class="shop-details">
+          <img class="shop-image" src="..\img\restaurant4.jpg" width="300" height="200">
+          <div>
+            <span class="pin-icon"></span>
+            <p>神奈川県横浜市xxxxxx xxxxx</p>
+          </div>
+        </div>
+      </div>
+      <div class="shop-item">
+        <div class="shop-details">
+          <img class="shop-image" src="..\img\restaurant5.jpg" width="300" height="200">
+          <div>
+            <span class="pin-icon"></span>
+            <p>埼玉県川越市xxxxxx xxxxx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+
+
+<footer>
+    <h5>プライバシーポリシー</h5>
+    <h5>お問合せ</h5>
+    <h5>運営会社</h5>
+</footer>
+</html>
+
