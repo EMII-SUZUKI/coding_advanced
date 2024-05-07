@@ -1,78 +1,63 @@
-/*SP ハンバーガーメニュー開閉*/
 $(document).ready(function() {
-    $('#hamburger').click(function() {
-        $('.sp-nav').slideToggle('slow', function() {
-            if ($(this).is(':visible')) {
-                $('.header-container').css('margin-bottom', '200px');
-            } else {
+        /* SPメニュー開閉 */
+        $('#hamburger').click(function() {
+            if ($(this).hasClass('opened')) {
+                $('.swiperContainer').css('transform', 'translateY(0)'); 
                 $('.header-container').css('margin-bottom', '0');
-            }
-        });
-    });
-});
+                } else {
+                $('.swiperContainer').css('transform', 'translateY(200px)'); 
+                 $('.header-container').css('margin-bottom', '15px');   
+                }
+                $('.swiperContainer').css('transition', 'transform 0.5s ease'); 
+                $('.sp-nav').slideToggle('100'); 
+                $(this).toggleClass('opened'); 
+            });
 
 
-
-
-
-
-/*スライドショー*/
-$(document).ready(function() {
-    const swiper = new Swiper('.top-slider', {
-        loop: true,                         
-        autoplay: {                         
-            delay: 2000,  
-        },   
-        navigation: {                       
+         /* スライドショー */
+        const swiper = new Swiper('.top-slider', {
+        loop: true,
+        autoplay: {
+            delay: 2000,
+        },
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        pagination: {                       
+        pagination: {
             el: '.swiper-pagination',
         },
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
-            draggable: true 
+            draggable: true
         },
         breakpoints: {
             768: {
                 slidesPerView: 2,
             },
         }
+       });
+
+          /* ご案内クリックアニメーション */
+        $('.topic').click(function() {
+        var $targetContent = $(this).next('.content-list');
+        $('.content-list').not($targetContent).slideUp('slow');
+        $targetContent.slideToggle('slow');
+       });
+
+      /* スクロール時、ふわっと表示させるアニメーション */
+         $(window).scroll(function() {
+          $('.js-fade').each(function() {
+            var pos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > pos - windowHeight + 100) {
+                $(this).addClass('scroll');
+            }
+        });
     });
 });
-
-
-
-/*ご案内クリックアニメーション*/
-$(document).ready(function() {
-  $('.topic').click(function() {
-    var $targetContent = $(this).next('.content-list');
-    
-    $('.content-list').not($targetContent).slideUp('slow');
-    
-    $targetContent.slideToggle('slow');
-  });
-});
-
-
-
-/*スクロール時、ふわっと表示させるアニメーション*/
-$(function(){
-	$(window).scroll(function (){
-		$('.js-fade').each(function(){
-			var pos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > pos - windowHeight + 100){
-				$(this).addClass('scroll');
-			}
-		});
-	});
-});
-
-
 
 
 
